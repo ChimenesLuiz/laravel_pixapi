@@ -27,24 +27,24 @@
 
               <fieldset class="mb-3">
                   <div class="form-check">
-                      <input class="form-check-input" type="radio" 
-                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <input class="form-check-input" type="radio" name="tipo" value="CPF_CNPJ"
+                      {{($data ?? '') ? ($data -> tipo == 'CPF_CNPJ' ? 'checked' : null) : null}}>
                       <label class="form  -check-label">
                         CPF ou CNPJ
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" 
-                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <input class="form-check-input" type="radio" value="Celular"
+                      name="tipo" {{($data ?? '') ? ($data -> tipo == 'Celular' ? 'checked' : null) : null}}>
                       <label class="form-check-label">
                         Telefone
                       </label>
                     </div>
                     
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" 
-                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <input class="form-check-input" type="radio" value="Email" 
+                      name="tipo" {{($data ?? '') ? ($data -> tipo == 'Email' ? 'checked' : null) : null}}>
                       <label class="form-check-label">
                         E-mail
                       </label>
@@ -52,7 +52,7 @@
 
                     <div class="form-check">
                       <input class="form-check-input" type="radio" 
-                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      name="tipo" value="Aleatoria" {{($data ?? '') ? ($data -> tipo == 'Aleatoria' ? 'checked' : null) : null}}>
                       <label class="form-check-label">
                         Chave Aleatoria
                       </label>
