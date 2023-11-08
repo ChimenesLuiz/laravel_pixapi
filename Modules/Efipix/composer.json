@@ -1,0 +1,26 @@
+{
+    "name": "nwidart/efipix",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Efipix\\": ""
+        }
+    },
+    "require": {
+        "efipay/sdk-php-apis-efi": "^1.4"
+    }
+}

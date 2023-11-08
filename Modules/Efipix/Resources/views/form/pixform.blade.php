@@ -1,0 +1,82 @@
+@extends('efipix::layouts.master')
+@section('pix.create')
+
+<div class="container">
+  <div class="text-center mb-4">
+      <h3>Gerar um Qrcode Pix</h3>
+      <p class="text-muted">Preencha as informacoes do recebedor</p>
+  </div>
+  <div class="container d-flex justify-content-center">
+      <form action="{{route('efipix.store')}}" method="POST" style="widht:50vw; min-width:300px;">
+        @csrf
+          <div class="row">
+              <div class="mb-3">
+                  <label for="" class="form-label">Nome Pagante:</label>
+                  <input type="text" 
+                  value="{{$data -> nome_pagante ?? ''}}" class="form-control" name="nome_pagante" >
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">CPF Pagante:</label>
+                <input type="text" value="{{$data -> cpf_pagante ?? ''}}" class="form-control" name="cpf_pagante" >
+            </div>
+
+              <div class="mb-3">
+                  <label for="" class="form-label">Nome Recebedor:</label>
+                  <input type="text" value="{{$data -> nome_recebedor ?? ''}}" class="form-control" name="nome_recebedor" >
+              </div>
+
+              <fieldset class="mb-3">
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" 
+                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <label class="form  -check-label">
+                        CPF ou CNPJ
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" 
+                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <label class="form-check-label">
+                        Telefone
+                      </label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" 
+                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <label class="form-check-label">
+                        E-mail
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" 
+                      value="{{$data -> tipo ?? ''}}" name="tipo">
+                      <label class="form-check-label">
+                        Chave Aleatoria
+                      </label>
+                    </div>
+              </fieldset>
+
+              <div class="mb-3">
+                  <label for="" class="form-label">Chave do recebedor:</label>
+                  <input type="text" value="{{$data -> chave ?? ''}}" class="form-control" name="chave" >
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Valor:</label>
+                <input type="text" value="{{$data -> valor ?? ''}}" class="form-control" name="valor" >
+              </div>
+
+  
+              <div class="mb-3" style="display: flex; justify-content: space-between;">
+                  <a href="{{route('efipix.index')}}" style="width: 25%;" class="btn btn-danger">Sair</a>
+
+                  <button type="submit" class="btn btn-success" name="btn_submit" style="width: 25%;">Gerar</button>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+@endsection

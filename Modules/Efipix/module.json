@@ -1,0 +1,13 @@
+{
+    "name": "Efipix",
+    "alias": "efipix",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Efipix\\Providers\\EfipixServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
