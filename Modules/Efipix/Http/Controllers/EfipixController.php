@@ -48,7 +48,7 @@ class EfipixController extends Controller
         if ($created)
         {
             
-            return redirect() -> route('efipix.index') -> with('message_success', 'Cadastrado com Sucesso!');
+            return redirect() -> route('efipix.index') -> with('message', 'Cadastrado com Sucesso!');
         }
         else
         {
@@ -85,9 +85,21 @@ class EfipixController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function update(Request $request, $id)
+    public function update(StorePixRequest $request, $id)
     {
-        //
+        $request -> validated();
+        $object = $this -> pix::find($id);
+
+        $object -> nome_pagante = $request -> nome_pagante;
+        $object -> cpf_pagante = $request -> cpf_pagante;
+        $object -> nome_recebedor = $request -> nome_recebedor;
+        $object -> tipo = $request -> tipo;
+        $object -> chave = $request -> chave;
+        $object -> valor = $request -> valor;
+
+        $object -> save();
+
+        return redirect() -> route('efipix.index') -> with('message', 'Editado com Sucesso!'); 
     }
 
     /**
@@ -100,7 +112,7 @@ class EfipixController extends Controller
         $created = $this -> pix -> destroy($id);
         if ($created)
         {
-            return redirect() -> route('efipix.index') -> with('message_destroy', 'Excluido com Sucesso!');
+            return redirect() -> route('efipix.index') -> with('message', 'Excluido com Sucesso!');
         }
         else
         {

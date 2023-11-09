@@ -20,7 +20,6 @@
         <title>TITLE HERE</title>
     </head>
         @include('efipix::pix.header')
-        @include('efipix::pix.afteralerts')
     <body>
         @yield('pix.index')
         @yield('pix.create')

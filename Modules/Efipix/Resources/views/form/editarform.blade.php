@@ -2,13 +2,13 @@
 @section('pix.create')
 @include('efipix::pix.error')
 
-<div class="container">
+<section class="container">
   <div class="text-center mb-4">
       <h3>Gerar um Qrcode Pix</h3>
       <p class="text-muted">Preencha as informacoes do recebedor</p>
   </div>
   <div class="container d-flex justify-content-center">
-      <form action="{{route('efipix.store')}}" method="POST" style="widht:50vw; min-width:300px;">
+      <form action="{{route('efipix.update', ['id' => $data -> id])}}" method="POST" style="widht:50vw; min-width:300px;">
         @csrf
           <div class="row">
               <div class="mb-3">
@@ -79,5 +79,5 @@
           </div>
       </form>
   </div>
-</div>
+</section>
 @endsection
