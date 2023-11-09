@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,14 +19,13 @@
         
         <title>TITLE HERE</title>
     </head>
-        @include('efipix::pix.header')  
+        @include('efipix::pix.header')
+        @include('efipix::pix.afteralerts')
     <body>
         @yield('pix.index')
         @yield('pix.create')
         @yield('pix.edit')
     </body>
 </html>
-
-
 </head>
 

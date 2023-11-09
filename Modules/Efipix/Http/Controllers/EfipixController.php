@@ -6,7 +6,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Efipix\Entities\Pixs;
-
+use Modules\Efipix\Http\Requests\StorePixRequest;
 
 class EfipixController extends Controller
 {
@@ -29,9 +29,10 @@ class EfipixController extends Controller
      * Show the form for creating a new resource.
      * @return Renderable
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('efipix::pix.create');
+        $flash = $request -> session() -> all();
+        return view('efipix::pix.create', ['flash' => $flash]);
     }
 
     /**
@@ -39,12 +40,15 @@ class EfipixController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request)
+    public function store(StorePixRequest $request)
     {   
+        $request -> validated();
+
         $created = $this -> pix -> create($request -> except(['_token', 'btn_submit']));
         if ($created)
         {
-            return redirect() -> route('efipix.index');
+            
+            return redirect() -> route('efipix.index') -> with('message_success', 'Cadastrado com Sucesso!');
         }
         else
         {
@@ -96,7 +100,7 @@ class EfipixController extends Controller
         $created = $this -> pix -> destroy($id);
         if ($created)
         {
-            return redirect() -> route('efipix.index');
+            return redirect() -> route('efipix.index') -> with('message_destroy', 'Excluido com Sucesso!');
         }
         else
         {

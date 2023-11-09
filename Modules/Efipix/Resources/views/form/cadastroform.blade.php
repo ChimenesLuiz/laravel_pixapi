@@ -1,5 +1,7 @@
 @extends('efipix::layouts.master')
 @section('pix.create')
+@include('efipix::pix.error')
+
 
 <div class="container">
   <div class="text-center mb-4">
@@ -12,17 +14,28 @@
           <div class="row">
               <div class="mb-3">
                   <label for="" class="form-label">Nome Pagante:</label>
-                  <input type="text" 
-                  value="{{$data -> nome_pagante ?? ''}}" class="form-control" name="nome_pagante" >
+                  <input maxlength="200" type="text" 
+                  @isset($flash["_old_input"])
+                      value="{{$flash['_old_input']['nome_pagante']}}"
+                  @endisset
+                  class="form-control" name="nome_pagante" >
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">CPF Pagante:</label>
-                <input type="text" value="{{$data -> cpf_pagante ?? ''}}" class="form-control" name="cpf_pagante" >
+                <input type="text" maxlength="11"
+                @isset($flash["_old_input"])
+                  value="{{$flash['_old_input']['cpf_pagante']}}"
+                @endisset
+            class="form-control" name="cpf_pagante" >
             </div>
 
               <div class="mb-3">
                   <label for="" class="form-label">Nome Recebedor:</label>
-                  <input type="text" value="{{$data -> nome_recebedor ?? ''}}" class="form-control" name="nome_recebedor" >
+                  <input type="text" maxlength="200"
+                  @isset($flash["_old_input"])
+                  value="{{$flash['_old_input']['nome_recebedor']}}"
+                  @endisset
+                  class="form-control" name="nome_recebedor" >
               </div>
 
               <fieldset class="mb-3">
@@ -61,19 +74,27 @@
 
               <div class="mb-3">
                   <label for="" class="form-label">Chave do recebedor:</label>
-                  <input type="text" value="{{$data -> chave ?? ''}}" class="form-control" name="chave" >
+                  <input type="text" maxlength="200"
+                  @isset($flash["_old_input"])
+                    value="{{$flash['_old_input']['chave']}}"
+                  @endisset
+                  class="form-control" name="chave" >
               </div>
 
               <div class="mb-3">
                 <label for="" class="form-label">Valor:</label>
-                <input type="text" value="{{$data -> valor ?? ''}}" class="form-control" name="valor" >
+                <input type="text" maxlength="100"
+                @isset($flash["_old_input"])
+                  value="{{$flash['_old_input']['valor']}}"
+                @endisset
+                class="form-control" name="valor" >
               </div>
 
   
               <div class="mb-3" style="display: flex; justify-content: space-between;">
                   <a href="{{route('efipix.index')}}" style="width: 25%;" class="btn btn-danger">Sair</a>
 
-                  <button type="submit" class="btn btn-success" name="btn_submit" style="width: 25%;">Gerar</button>
+                  <button type="submit" class="btn btn-success" name="btn_submit" style="width: 25%;" onclick="">Gerar</button>
               </div>
           </div>
       </form>

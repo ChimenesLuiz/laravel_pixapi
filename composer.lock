@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a8accd3fcb6acd498dfdd514926205d",
+    "content-hash": "641b0a7a4d6f581ac731faeaf6d6bf53",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1664,6 +1664,62 @@
                 }
             ],
             "time": "2023-10-17T14:13:20+00:00"
+        },
+        {
+            "name": "linvix-sistemas/cpf-cnpj-validator-php",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/linvix-sistemas/cpf-cnpj-validator-php.git",
+                "reference": "647edc4a9769c9c590a2fc3fc4468bb031b9a110"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/linvix-sistemas/cpf-cnpj-validator-php/zipball/647edc4a9769c9c590a2fc3fc4468bb031b9a110",
+                "reference": "647edc4a9769c9c590a2fc3fc4468bb031b9a110",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LinvixSistemas\\ValidadorCpfCnpj\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gustavo LinvixSistemas",
+                    "email": "gustavo.bissolli@gmail.com"
+                },
+                {
+                    "name": "Cristiano Júnior da Cruz",
+                    "email": "cristiano@linvix.com.br"
+                }
+            ],
+            "description": "Classe em PHP para validação de CPF e CNPJ.",
+            "homepage": "https://github.com/linvix-sistemas/cpf-cnpj-validator-php",
+            "keywords": [
+                "brasil",
+                "cnpj",
+                "cpf",
+                "documento",
+                "laravel",
+                "validador"
+            ],
+            "support": {
+                "issues": "https://github.com/linvix-sistemas/cpf-cnpj-validator-php/issues",
+                "source": "https://github.com/linvix-sistemas/cpf-cnpj-validator-php/tree/v1.0.1"
+            },
+            "time": "2023-07-25T20:55:33+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5904,16 +5960,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.15.3",
+            "version": "2.15.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187"
+                "reference": "a139776fa3f5985a50b509f2a02ff0f709d2a546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/c83e88a30524f9360b11f585f71e6b17313b7187",
-                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/a139776fa3f5985a50b509f2a02ff0f709d2a546",
+                "reference": "a139776fa3f5985a50b509f2a02ff0f709d2a546",
                 "shasum": ""
             },
             "require": {
@@ -5963,7 +6019,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.15.3"
+                "source": "https://github.com/filp/whoops/tree/2.15.4"
             },
             "funding": [
                 {
@@ -5971,7 +6027,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-13T12:00:00+00:00"
+            "time": "2023-11-03T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",

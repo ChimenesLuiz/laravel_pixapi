@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'nwidart/efipix',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '487e2a3359ceba697b6507a9909eca816ccc0341',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'efipay/sdk-php-apis-efi' => array(
-            'pretty_version' => '1.4.0',
-            'version' => '1.4.0.0',
-            'reference' => '00077e9c4eb06200693c0232eafff44cfe4f3ef2',
+            'pretty_version' => '1.4.1',
+            'version' => '1.4.1.0',
+            'reference' => 'b5de2087cf741b95d9f7702c2bc2e5baa441ff25',
             'type' => 'library',
             'install_path' => __DIR__ . '/../efipay/sdk-php-apis-efi',
             'aliases' => array(),
@@ -46,10 +46,19 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'linvix-sistemas/cpf-cnpj-validator-php' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => '647edc4a9769c9c590a2fc3fc4468bb031b9a110',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../linvix-sistemas/cpf-cnpj-validator-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'nwidart/efipix' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '487e2a3359ceba697b6507a9909eca816ccc0341',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -57,7 +57,7 @@ class Config
         $conf['partnerToken'] = (string) isset($options['partner_token']) || isset($options['partner-token']) || isset($options['partnerToken']) ? $options['partner_token'] ?? $options['partner-token'] ?? $options['partnerToken'] : null;
         $conf['headers'] = $options['headers'] ?? null;
         $conf['baseUri'] = $options['url'] ?? null;
-        $conf['api'] = $options['api'];
+        $conf['api'] = $options['api'] ?? null;
 
         if ($conf['api'] !== 'CHARGES') {
             $conf['certificate'] = (string) isset($options['certificate']) || isset($options['pix_cert']) ? $options['certificate'] ?? $options['pix_cert'] : null;

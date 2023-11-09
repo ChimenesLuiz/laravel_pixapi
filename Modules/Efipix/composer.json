@@ -21,6 +21,7 @@
         }
     },
     "require": {
-        "efipay/sdk-php-apis-efi": "^1.4"
+        "efipay/sdk-php-apis-efi": "^1.4",
+        "linvix-sistemas/cpf-cnpj-validator-php": "^1.0"
     }
 }

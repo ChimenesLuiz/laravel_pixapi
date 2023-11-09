@@ -36,6 +36,10 @@ class ComposerStaticInit9b0d9ca9baff72b73bc1a1e31f5106ea
         array (
             'Modules\\Efipix\\' => 15,
         ),
+        'L' => 
+        array (
+            'LinvixSistemas\\ValidadorCpfCnpj\\' => 32,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -97,6 +101,10 @@ class ComposerStaticInit9b0d9ca9baff72b73bc1a1e31f5106ea
         'Modules\\Efipix\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',
+        ),
+        'LinvixSistemas\\ValidadorCpfCnpj\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/linvix-sistemas/cpf-cnpj-validator-php/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

@@ -1,5 +1,9 @@
 @extends('efipix::layouts.master')
 @section('pix.index')
+@if (session() -> has('message'))
+    
+@endif
+
     <section class="container">
         <a href="{{route('efipix.create')}}" class="btn btn-dark mb-3">Gerar nova Cobranca</a>
         <table class="table table-hover text-left">
