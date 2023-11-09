@@ -3,4 +3,4 @@
 
 Objetivo: CRUD de cobrancas pix, usando a Api Pix da EFI.
 
-Status: Nao concluido
+Status: Nao concluido, falta integrar com a API
