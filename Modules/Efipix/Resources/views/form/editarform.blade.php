@@ -1,8 +1,9 @@
 @extends('efipix::layouts.master')
 @section('pix.create')
-@include('efipix::pix.error')
+
 
 <section class="container">
+    @include('efipix::pix.error')
   <div class="text-center mb-4">
       <h3>Gerar um Qrcode Pix</h3>
       <p class="text-muted">Preencha as informacoes do recebedor</p>
